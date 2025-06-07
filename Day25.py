@@ -34,10 +34,31 @@ import pandas as pd
 # Get Data in row
 # print(df[df['temp'].max() == df.temp])
 
+# Creating a new dataframe of how many squares are there of each color
+
 df = pd.read_csv('2018_Central_Park_Squirrel_Census_-_Squirrel_Data_20250607.csv')
+# print(df.head())
+
+# Solution One
+count_Gray = df[df['Primary Fur Color'] == 'Gray']
+grey = count_Gray['Primary Fur Color'].count()
+
+count_cinnamon = df[df['Primary Fur Color'] == 'Cinnamon']
+cinnamon = count_cinnamon['Primary Fur Color'].count()
+
+count_black = df[df['Primary Fur Color'] == 'Black']
+black = count_black['Primary Fur Color'].count()
 
 
+d =  {
+    'Fur Color': pd.Series(['Gray', 'Black', 'Cinnamon'], index= [0,1,2]),
+    'Count': pd.Series([grey, black, cinnamon])
+}
+new = pd.DataFrame(d)
+print(new)
 
-
-
-
+# solution 2
+color_Count = df['Primary Fur Color'].value_counts()
+new_df = color_Count.reset_index()
+new_df.columns = ['Fur Color', 'Count']
+# print(new_df)
