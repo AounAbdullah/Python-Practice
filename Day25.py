@@ -55,10 +55,11 @@ d =  {
     'Count': pd.Series([grey, black, cinnamon])
 }
 new = pd.DataFrame(d)
-print(new)
-
+# print(new)
+new.to_csv
 # solution 2
 color_Count = df['Primary Fur Color'].value_counts()
 new_df = color_Count.reset_index()
 new_df.columns = ['Fur Color', 'Count']
 # print(new_df)
+new_df.to_csv('Squirrel_count.csv')
