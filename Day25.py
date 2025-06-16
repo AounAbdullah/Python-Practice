@@ -56,7 +56,7 @@ d =  {
 }
 new = pd.DataFrame(d)
 # print(new)
-new.to_csv
+new.to_csv()
 # solution 2
 color_Count = df['Primary Fur Color'].value_counts()
 new_df = color_Count.reset_index()
