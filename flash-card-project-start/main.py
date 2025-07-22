@@ -4,7 +4,7 @@ import random as r
 
 BACKGROUND_COLOR = "#B1DDC6"
 # Importing csv file
-df = pd.read_csv('data/french_words.csv')
+df = pd.read_csv('flash-card-project-start/data/french_words.csv')
 to_learn = df.to_dict(orient='records')
 timer = None
 count = 3
