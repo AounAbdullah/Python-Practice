@@ -101,7 +101,7 @@ window.title('Password Generator')
 
 # Logo
 canvas = Canvas(width=200, height=200, highlightthickness=0, bd=0, bg=window['bg'])
-image = PhotoImage(file='logo.png')
+image = PhotoImage(file='password-manager-start/logo.png')
 canvas.create_image(100, 100, image=image)
 canvas.grid(column=0, row=0, columnspan=3, pady=(0, 20))
 
