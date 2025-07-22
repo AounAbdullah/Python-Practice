@@ -75,8 +75,8 @@ flip_timer = screen.after(3000,func=flipcard)
 
 # Back canvas
 canvas = Canvas(bg=BACKGROUND_COLOR, width=800, height=526, highlightthickness=0, bd=0)
-front_image = PhotoImage(file="images/card_front.png")
-back_image = PhotoImage(file="images/card_back.png")
+front_image = PhotoImage(file="flash-card-project-start/images/card_front.png")
+back_image = PhotoImage(file="flash-card-project-start/images/card_back.png")
 card_background = canvas.create_image(400,263,image=front_image)
 card_title = canvas.create_text(400, 150, text="", font=("Ariel", 40, "italic"), fill="black")
 card_Word = canvas.create_text(400, 263, text="", font=("Ariel", 60, "bold"), fill="black")
@@ -84,8 +84,8 @@ card_Word = canvas.create_text(400, 263, text="", font=("Ariel", 60, "bold"), fi
 canvas.grid(column=0, row=0, columnspan=2, padx=50, pady=(50, 0))  # Top padding only
 
 # Buttons
-Green = PhotoImage(file="images/right.png")
-Red = PhotoImage(file="images/wrong.png")
+Green = PhotoImage(file="flash-card-project-start/images/right.png")
+Red = PhotoImage(file="flash-card-project-start/images/wrong.png")
 
 right_button = Button(image=Green, highlightthickness=0, bd=0,command=words_right)
 right_button.grid(column=1, row=1, pady=(20, 50))  # 20px spacing from canvas, 50px bottom
